@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 
+// per: https://courses.thinkful.com/react-v1/checkpoint/12#assignment
+
 const FEATURES = {
   Processor: [
     {
