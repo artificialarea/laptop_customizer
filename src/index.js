@@ -3,7 +3,23 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 
-// per: https://courses.thinkful.com/react-v1/checkpoint/12#assignment
+// assignment per: https://courses.thinkful.com/react-v1/checkpoint/12#assignment
+
+// COMPONENT COMPOSITION ////////////////
+//
+// index
+// App ................... { stateful }
+//// FeaturesStore
+//// FeaturesContainer
+//////// FeatureList
+//////////// FeatureItem
+//// ShoppingCart
+//////// Summary
+//////// TotalCost
+//
+/////////////////////////////////////////
+
+
 
 const FEATURES = {
   Processor: [
