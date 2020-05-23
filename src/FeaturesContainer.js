@@ -5,7 +5,6 @@ import FeatureList from './FeatureList';
 export default class FeaturesContainer extends React.Component {
 
   render() {
-
     return (
       <div>
         <form className="main__form">
@@ -16,8 +15,8 @@ export default class FeaturesContainer extends React.Component {
               handleUpdate={this.props.handleUpdate}
             />
         </form>
-        
       </div>
-    )
+    );
   }
+
 }
