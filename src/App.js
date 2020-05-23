@@ -110,15 +110,10 @@ class App extends Component {
         </header>
         <main>
 
-          {/* FeaturesContainer */}
-          {/* <form className="main__form">
-            <h2>Customize your laptop</h2>
-            {features}
-          </form> */}
           <FeaturesContainer 
             features={this.props.features}
             selected={this.state.selected}
-            onChangeUpdate={this.updateFeature}
+            handleUpdate={this.updateFeature}
           />
 
           {/* ShoppingCart */}
@@ -136,11 +131,11 @@ class App extends Component {
 
         <div className="placeholder">
           <hr />
-          <FeaturesContainer 
+          {/* <FeaturesContainer 
             features={this.props.features}
             selected={this.state.selected}
-            onChangeUpdate={this.updateFeature}
-          />
+            handleUpdate={this.updateFeature}
+          /> */}
           <ShoppingCart />
         </div>
 
