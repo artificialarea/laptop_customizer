@@ -8,12 +8,9 @@ import slugify from 'slugify';
 export default class FeatureItem extends React.Component {
 
   static defaultProps = {
-    key: '',
-    item: [],
-    name: '',
+    item: '',
     feature: '',
-    features: {},
-    selected: {},
+    selected: {}, // incl. inline Conditional Rendering
     currency: new Intl.NumberFormat('en-US', {
       style: 'currency',
       currency: 'USD'
@@ -30,7 +27,11 @@ export default class FeatureItem extends React.Component {
           id={itemHash}
           className="feature__option"
           name={slugify(this.props.feature)}
-          checked={this.props.item.name === this.props.selected[this.props.feature].name}
+          /* REVISIT to understand need for 'Conditional Rendering' to pass smoke test: checked={this.props.selected.length > 0 && ...
+          yet can't include conditional because then it stops persistant visual rendering of checked FeatureItems in the DOM....
+          */
+          checked={
+            this.props.item.name === this.props.selected[this.props.feature].name}
           onChange={e => this.props.handleUpdate(this.props.feature, this.props.item)}
         />
         <label htmlFor={itemHash} className="feature__label">

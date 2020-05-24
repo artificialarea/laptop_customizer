@@ -5,16 +5,14 @@ import FeatureItem from './FeatureItem';
 export default class FeatureList extends React.Component {
 
   static defaultProps = {
-    feature: [], // incl with Conditional Rendering
+    feature: [], // incl. inline Conditional Rendering
   }
 
   render() {
     return (
-      <div>
+      <div className="feature__list">
 
-        {/* REVISIT
-        still not really sure why, but in order to pass smoke test 
-        needed to add 'Conditional Rendering' to .map
+        {/* REVISIT to understand need for 'Conditional Rendering' for .map to pass smoke test
         per https://www.debuggr.io/react-map-of-undefined/#wrapping-up
         and https://reactjs.org/docs/conditional-rendering.html 
         */}

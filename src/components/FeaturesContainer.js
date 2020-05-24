@@ -21,7 +21,7 @@ export default class FeaturesContainer extends React.Component {
                     <h3>{feature}</h3>
                   </legend>
                   <FeatureList 
-                    feature={feature} // NOTE: I stuggled for a while before realising needed to pass this .map param as a prop =/
+                    feature={feature}
                     features={this.props.features}
                     selected={this.props.selected}
                     currency={this.props.currency}
