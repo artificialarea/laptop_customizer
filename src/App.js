@@ -4,6 +4,7 @@ import './App.css';
 import FeaturesContainer from './FeaturesContainer';
 import ShoppingCart from './ShoppingCart';
 
+
 // This object will allow us to
 // easily convert numbers into US dollar values
 const USCurrencyFormat = new Intl.NumberFormat('en-US', {
@@ -11,7 +12,9 @@ const USCurrencyFormat = new Intl.NumberFormat('en-US', {
   currency: 'USD'
 });
 
+
 export default class App extends Component {
+  
   state = {
     selected: {
       Processor: {
@@ -48,20 +51,16 @@ export default class App extends Component {
           <h1>ELF Computing | Laptops</h1>
         </header>
         <main>
-
           <FeaturesContainer 
             features={this.props.features}
             selected={this.state.selected}
             currency={USCurrencyFormat}
             handleUpdate={this.updateFeature}
           />
-
           <ShoppingCart 
-            features={this.props.features}
             selected={this.state.selected}
             currency={USCurrencyFormat}
           />
-
         </main>
       </div>
     );
