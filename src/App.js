@@ -48,41 +48,6 @@ class App extends Component {
 
   render() {
 
-    // const features = Object.keys(this.props.features).map((feature, idx) => {
-    //   const featureHash = feature + '-' + idx;
-    //   // console.log(featureHash);
-    //   const options = this.props.features[feature].map(item => {
-    //     const itemHash = slugify(JSON.stringify(item));
-    //     // const itemHash = JSON.stringify(item);
-    //     // const itemHash = item;
-    //     console.log(itemHash);
-    //     return (
-    //       <div key={itemHash} className="feature__item">
-    //         <input
-    //           type="radio"
-    //           id={itemHash}
-    //           className="feature__option"
-    //           name={slugify(feature)}
-    //           checked={item.name === this.state.selected[feature].name}
-    //           onChange={e => this.updateFeature(feature, item)}
-    //         />
-    //         <label htmlFor={itemHash} className="feature__label">
-    //           {item.name} ({USCurrencyFormat.format(item.cost)})
-    //         </label>
-    //       </div>
-    //     );
-    //   });
-
-    //   return (
-    //     <fieldset className="feature" key={featureHash}>
-    //       <legend className="feature__name">
-    //         <h3>{feature}</h3>
-    //       </legend>
-    //       {options}
-    //     </fieldset>
-    //   );
-    // });
-
     const summary = Object.keys(this.state.selected).map((feature, idx) => {
       const featureHash = feature + '-' + idx;
       const selectedOption = this.state.selected[feature];
@@ -113,6 +78,7 @@ class App extends Component {
           <FeaturesContainer 
             features={this.props.features}
             selected={this.state.selected}
+            currency={USCurrencyFormat}
             handleUpdate={this.updateFeature}
           />
 
@@ -128,17 +94,6 @@ class App extends Component {
             </div>
           </section>
         </main>
-
-        <div className="placeholder">
-          <hr />
-          {/* <FeaturesContainer 
-            features={this.props.features}
-            selected={this.state.selected}
-            handleUpdate={this.updateFeature}
-          /> */}
-          <ShoppingCart />
-        </div>
-
       </div>
     );
   }
