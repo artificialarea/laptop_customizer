@@ -10,11 +10,14 @@ export default class FeatureItem extends React.Component {
   static defaultProps = {
     key: '',
     item: [],
-    name: 'Mary',
+    name: '',
     feature: '',
     features: {},
     selected: {},
-    currency: '',
+    currency: new Intl.NumberFormat('en-US', {
+      style: 'currency',
+      currency: 'USD'
+    }),
     onChange: () => {},
   }
 
