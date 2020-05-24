@@ -1,4 +1,4 @@
-const FEATURES = {
+export default {
   Processor: [
     {
       name: '17th Generation Intel Core HB (7 Core with donut spare)',

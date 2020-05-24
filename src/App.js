@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-// import FEATURES from './FeaturesStore';
+import STORE from './STORE';
 import FeaturesContainer from './components/FeaturesContainer';
 import ShoppingCart from './components/ShoppingCart';
 
@@ -16,6 +16,7 @@ const USCurrencyFormat = new Intl.NumberFormat('en-US', {
 export default class App extends Component {
 
   state = {
+    features: STORE,
     selected: {
       Processor: {
         name: '17th Generation Intel Core HB (7 Core with donut spare)',
@@ -45,6 +46,7 @@ export default class App extends Component {
   };
 
   render() {
+    console.log(this.features)
     return (
       <div className="App">
         <header>
@@ -52,7 +54,7 @@ export default class App extends Component {
         </header>
         <main>
           <FeaturesContainer 
-            features={this.props.features}
+            features={this.state.features}
             selected={this.state.selected}
             currency={USCurrencyFormat}
             handleUpdate={this.updateFeature}
