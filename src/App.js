@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 // import FEATURES from './FeaturesStore';
-import FeaturesContainer from './FeaturesContainer';
-import ShoppingCart from './ShoppingCart';
+import FeaturesContainer from './components/FeaturesContainer';
+import ShoppingCart from './components/ShoppingCart';
 
 
 // This object will allow us to
@@ -14,7 +14,7 @@ const USCurrencyFormat = new Intl.NumberFormat('en-US', {
 
 
 export default class App extends Component {
-  
+
   state = {
     selected: {
       Processor: {
